@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" type="text/css" href="popup.css" media="screen" />
+  <script type="text/javascript" src="header.js"></script>
+  <script type="text/javascript" src="popup.js"></script>
+</head>
+<body>
+  <div id="show">
+    <h1>CHOOSE A PROTOCOL</h1>
+    <h1>(for intergration with your soft phone)</h1>
+    <br/>
+    <div id="options">
+      <p>
+        <input type="radio" id="sip" name="protocol" />
+        <label for="sip"><span></span> sip:NUMBER</label>
+      <p>
+      <p>
+        <input type="radio" id="tel" name="protocol" />
+        <label for="tel"><span></span> tel:NUMBER</label>
+      </p>
+      <p>
+        <input type="radio" id="callto" name="protocol" />
+        <label for="callto"><span></span> callto:NUMBER</label>
+      </p>
+      <p>
+        <input type="radio" id="sipCallerAny" name="protocol" />
+        <label for="sipCallerAny"><span></span> Special / Custom protocol</label>
+        <input type="text" id="sipCallerAnyProtocol" placeholder="1.Set up your SoftPhone as protocol handler   2.Input it here" />
+      </p>
+      <p>
+        <input type="radio" id="sipCallerGet" name="protocol" />
+        <label for="sipCallerGet"><span></span> Http GET (input $NUMBER as placeholder)</label>
+        <input type="text" id="sipCallerGetUrl" placeholder="http://server.com/?user=U&pass=P&dial=$NUMBER" />
+      </p>
+    </div>
+  </div>
+</body>
+</html>
+
+

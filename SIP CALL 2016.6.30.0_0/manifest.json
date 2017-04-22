@@ -1,0 +1,26 @@
+{
+   "background": {
+      "scripts": [ "header.js", "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icon128.png",
+      "default_popup": "popup.html",
+      "default_title": "SIP Caller click to call"
+   },
+   "content_scripts": [ {
+      "js": [ "header.js", "content.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_end"
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.google.com https://ssl.google-analytics.com https://www.google-analytics.com; object-src 'self' https://www.google.com https://ssl.google-analytics.com https://www.google-analytics.com",
+   "description": "SIP Phone Click2Call. Detect telephone numbers on the web and convert them to sip, tel, callto (click to call links)",
+   "icons": {
+      "128": "icon128.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCe/P6csWG/ji97RxfQA7BPX39gOI+NmriDqcLtKzLRuUP8QJnjESBXZW1WimO34TqWwoMx6TNVlUnqpg0mNMsG44iuB1Y6sZug6yUws9WeHRpa5hSXAgIgLXvjCZy00nXljRGScyFzTCa3J3YMisVMl8RWgBxYOTUwGU2pPNsKcwIDAQAB",
+   "manifest_version": 2,
+   "name": "SIP Caller click to call",
+   "permissions": [ "tabs", "storage", "http://*/*", "https://*/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2016.6.30.0"
+}
